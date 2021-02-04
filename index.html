@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Movie Rating</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <!-- <link rel="stylesheet" type="text/css" href="index.css"> -->
 </head>
 
 <body>
 
-    <form name="movieForm" onsubmit="submittedForm(); return false;">
+    <form id="theForm" onsubmit="return false">
 
         <fieldset id="moveRatingInfo">
             <!-- The fieldset is only to make the project look nicer :) -->
@@ -24,11 +24,25 @@
             <input type="int" id="rating" name="rating"><br><br><br>
 
             <!-- Submit button -->
-            <input type="submit" value="Add Movie">
+            <button type="submit" onclick="submitForm()">Add Movie</button>
+            <!-- View button -->
+            <button type="submit" onclick="viewMovies()">View Movies</button>
         </fieldset>
     </form>
 
-    <script type="text/javascript" src="index.js"></script>
+    <br><br>
+
+    <fieldset id="experience">
+
+        <h2>My Favorite Movies</h2>
+  
+        <ul id="listOfMovies">
+          <li id="list"></li>
+        </ul>
+      </fieldset>
+
+    <script type="text/javascript" src="Main.js"></script>
+    <script type="text/javascript" src="Movie.js"></script>
 </body>
 
 </html>

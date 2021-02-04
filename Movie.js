@@ -8,6 +8,10 @@ function Movie (movietitle, rating)
         let user_rating = parseInt(this.rating);
 
         //making sure the user didn't leave the title field blank and rating is an integer between 1 and 5 
+        
+        // This is Dylan! Something seems to go wrong here?
+        // I think it might have something to do with the if
+        // statement.
         if(movietitle && (user_rating >=1 && user_rating <=5) )
         {
             return true;
@@ -16,11 +20,9 @@ function Movie (movietitle, rating)
         {
             return false;
         }
-
-        this.toString = function ()
-         {
-             return "Movie:" +  this.movietitle + "Rating:" + user_rating
-        }
-
+    }
+    this.toString = function ()
+    {
+        return "Movie: " +  this.movietitle + "Rating: " + this.rating
     }
 }
