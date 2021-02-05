@@ -1,0 +1,4 @@
+form #theForm fieldset #moveRatingInfo {background: #B0C4DE; border :1 px solid #191970; margin: 0 auto;}
+form #theForm legend {font-family: georgia, sans-serif; font-size: 1.1 em; font-weight: bold; border: 3px solid #fff; margin-bottom: 5px; padding: 3px; width: 254px; background: #778899}
+fieldset #experience {background: #B0C4DE; border: 1 px solid #191970; margin:0 auto;}
+#button: hover {color: #000;}
