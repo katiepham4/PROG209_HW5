@@ -2,7 +2,9 @@ document.getElementById("listOfMovies").style.display = "none"; // Hides the lis
 movieArray = []; // Array of movies!
 
 function submitForm() {
-    let myMovie = new Movie(document.getElementById("mTitle"), document.getElementById(rating))
+    let title = document.getElementById("mtitle").value;
+    let rating = document.getElementById("rating").value;
+    myMovie = new Movie(title, rating); // This works! I used alert()
     
     if (true) // Until the Movie.js is ready. --> myMovie.validate()
     {
