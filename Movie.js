@@ -1,30 +1,34 @@
-function Movie (movietitle, rating) 
-{
-    this.movietitle = movietitle;
+//constructor function 
+function Movie (title, rating) {
+    //property to hold the movie title
+    this.title = title;
+    //property to hold the rating
     this.rating = rating;
 
+    //validation method to confirm user did not leave title or rating fields blank and the rating is an integer between 1 and 5
     this.validate = function ()
     {
-        let user_rating = parseInt(this.rating);
-
-        //making sure the user didn't leave the title field blank and rating is an integer between 1 and 5 
-        if(movietitle == "")
+        let movie_rating = this.rating;
+        
+        if (title == "")
         {
             return false;
         }
-        else if (rating < 1 || rating > 5)
+        else if (movie_rating == "" || movie_rating < 1 ||movie_rating > 5)
         {
             return false;
         }
-        else 
-        {
+        else{
             return true;
         }
 
-        this.toString = function ()
-         {
-             return "Movie:" +  this.movietitle + "Rating:" + user_rating
-        }
 
+    }
+
+    //toString method
+
+    this.toString = function ()
+    {
+        return "Movie: "+this.title+", Rating: "+this.rating;
     }
 }
