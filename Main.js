@@ -6,7 +6,7 @@ function submitForm() {
     let rating = document.getElementById("rating").value;
     myMovie = new Movie(title, rating); // This works! I used alert()
     
-    if (true) // Until the Movie.js is ready. --> myMovie.validate()
+    if (myMovie.validate())
     {
         movieArray.push(myMovie)
 
